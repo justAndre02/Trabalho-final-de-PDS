@@ -1,0 +1,24 @@
+<!--
+    Nome:Nárcio Raimundo Silvestre 
+    Nº de estudante: 21723
+    Licenciatura de Engenharia de Sistemas Informáticos
+-->
+
+<div class="main">
+    <app-nav-after-login-barber></app-nav-after-login-barber>
+    <section>
+        <div class="content">
+            <h1>Área de <br> <span>Funcionário</span></h1><br>
+            <h3>Bem-Vindo de Volta<br> <span>{{name}}</span></h3><br>
+            <p>Consulte suas Marcações</p>
+            <button id="bt-agendar" (click)="showschedulelist()">Consultar</button>
+        </div>
+
+        <div class="schedulelist" *ngIf="showConsultar">
+            <ul>
+                <li *ngFor="let x of listSchedule">{{x.name}} {{x.desc}} {{x.scheduleDate}}</li>
+            </ul>
+        </div>
+    </section>
+</div>
+

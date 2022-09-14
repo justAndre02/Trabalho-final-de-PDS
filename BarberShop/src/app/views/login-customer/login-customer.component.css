@@ -1,0 +1,99 @@
+:root {
+    --box-size: 336px;
+}
+
+body {
+    height: 100vh;
+	width: 100%;
+    background-image: url(/assets/img/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.center-input-box  {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin-top: 100px;
+    margin-bottom: auto;
+}
+
+.input-box {
+    background-color: rgba(22, 21, 29, 1);
+    width: 400px;
+    border-radius: 20px;
+    height: calc(var(--box-size));
+    display: flex;
+    flex-flow: column;
+    align-self: center;
+    justify-self: center;
+    margin-top: 100px;
+}
+
+.input-box .line-div {
+    position: relative;
+    width: 120px;
+    height: 6px;
+
+    color: #c77b09;
+    background-color: #c77b09;
+    border-radius: 5px;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+    align-self: center;
+}
+
+.input-box .exit-button {
+    position: relative;
+    margin-left: 38%;
+    width: 70px;
+    text-transform: capitalize;
+    font-weight: bold;
+    background-color: #c77b09;
+    border-radius: 5px;
+    border-color: #c77b09;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: "Roboto";
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.exit-button a{
+    color: white;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.text 
+{
+    border-radius: 5px;
+}
+
+.login-field-div {
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 30px;
+    margin-left: 25%;
+}
+
+.login-field-div p {
+    align-self: center;
+    justify-self: center;
+    color: #C77b09;
+    font-family: sans-serif;
+    margin-left: 0%;
+    font-family: "Roboto";
+}
+
+.anchor-generic {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #C77b09;
+    font-weight: bold;
+    font-family: "Roboto";
+    margin-left: 33%;
+}

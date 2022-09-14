@@ -1,0 +1,25 @@
+.fields {
+    align-self: center;
+    justify-self: center
+}
+
+.text 
+{
+    border-radius: 5px;
+}
+
+.field-div {
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 20px;
+    margin-left: 20%;
+}
+
+.field-div p {
+    align-self: center;
+    justify-self: center;
+    color: #C77b09;
+    font-family: sans-serif;
+    margin-left: 0%;
+    font-family: "Roboto";
+}

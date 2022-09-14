@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+</head>
+<body>
+    <app-nav></app-nav>
+    <div class = "center-input-box">
+        <div class ="input-box">
+            <div class = "line-div"></div>
+            <div *ngIf="error"><p style="color: #c77b09;margin-left: 100px;font-family:'Roboto';">Dados Errados</p></div>
+            <div class = "fields"> 
+                <div class = "field-div">
+                    <p>Name</p>
+                    <input type="text"[(ngModel)]="signupBarber.name" name="name" class = "name-text text">
+                </div>
+                <div class = "field-div">
+                    <p>Phone</p>
+                    <input type="tel" [(ngModel)]="signupBarber.phone" name="phone" class="nif-text text">
+                </div>
+                <div class = "field-div">
+                    <p>Email</p>
+                    <input type="email" [(ngModel)]="signupBarber.email" name="email" class = "email-text text">
+                </div>
+                <div class = "field-div">
+                    <p>Password</p>
+                    <input type= "password"  [(ngModel)]="signupBarber.pass" name="password" class="password-text text">
+                </div>
+            </div>
+            
+            <button class = "exit-button" (click)="registerFunction()">Register</button>
+        </div>
+    </div>
+</body>
+</html>

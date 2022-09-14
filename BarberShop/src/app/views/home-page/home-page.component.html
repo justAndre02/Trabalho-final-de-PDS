@@ -1,0 +1,20 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página Inicial</title>
+    </head>
+    <body>
+        <div class="hero"><app-nav></app-nav></div>
+        <div class="content"><app-content></app-content></div>        
+        <section class="about"><app-about></app-about></section>
+        <footer><app-footer><app-social></app-social></app-footer></footer>
+        <script>
+        document.querySelector("#btm").addEventListener("click", () => {
+        window.scrollTo(0,document.body.scrollHeight);
+        })
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,45 @@
+
+footer{
+	position: relative;
+	font-family: "Roboto";
+	width: 100%;
+	height: 400px;
+	background: #0c0c0c;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+footer p:nth-child(1){
+	font-size: 30px;
+	color: white;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+footer p:nth-child(2){
+	color: white;
+	font-size: 17px;
+	width: 500px;
+	text-align: center;
+	line-height: 26px;
+}
+
+.end{
+	position: absolute;
+	color:#c77b09;
+	bottom: 35px;
+	font-size: 14px; 
+}
+
+.hankstudiosgmailcom {
+	color: rgb(255, 255, 255);
+	font-family: var(--font-family-roboto);
+	font-size: var(--font-size-m);
+	font-weight: 700;
+	left: 604px;
+	letter-spacing: 0;
+	top: 208px;
+}
+

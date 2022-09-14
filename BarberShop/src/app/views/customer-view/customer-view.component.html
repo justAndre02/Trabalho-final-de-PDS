@@ -1,0 +1,90 @@
+
+<!--
+    Nome:Nárcio Raimundo Silvestre 
+    Nº de estudante: 21726
+    Licenciatura de Engenharia de Sistemas Informáticos
+-->
+
+<div class="main">
+    <app-nav-after-login></app-nav-after-login>
+    <section>
+        <div class="content">
+            <h1>Área de <br> <span>Cliente</span></h1><br>
+            <h3>Bem-Vindo de Volta<br> <span>{{name}}</span></h3><br>
+            <p>Agende uma Marcação ou Consulte suas Marcações </p>
+            <button class="bta"  (click)="showschedule()">Agendar</button>
+            <button class="bta" (click)="showschedulelist()">Consultar</button>
+        </div>
+
+        <div class="schedule" *ngIf="showAgendar" >
+            <div ><p style="color: white;">{{message}}</p></div>
+            <form action="">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="barbershop">Barbearia</label><br>
+                            <select id="barbershop" name="barbershop" [(ngModel)]="schedule.Bid" >
+                                <option *ngFor="let barbershop of listBarbershop " [value]="barbershop.Bid">{{barbershop.name}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="servicetype">Tipo de Serviço</label><br>
+                            <select id="servicetype" name="service" [(ngModel)]="schedule.ServiceType" >
+                                <option *ngFor="let service of listServiceType" [value]="service.STid">{{service.Desc}}</option>
+                            </select> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="func">Funcionário</label><br>
+                            <select *ngIf="(schedule.ServiceType==2)" id="func" name="funcionario" [(ngModel)]="schedule.FuncId" >
+                                <option *ngFor="let funcionario of listBarbers " [value]="funcionario.Bid">{{funcionario.name}}</option>
+                            </select>
+                            <select *ngIf="(schedule.ServiceType==1)" id="func" name="funcionario" [(ngModel)]="schedule.FuncId" >
+                                <option *ngFor="let funcionario of listTatooArtist " [value]="funcionario.Aid">{{funcionario.name}}</option>
+                            </select>
+                             
+                        </td>
+                        <td>
+                            <label for="Service">servico</label><br>
+                            <select *ngIf="(schedule.ServiceType==2)" id="Service" name="servico" [(ngModel)]="schedule.typeId" >
+                                <option *ngFor="let servico of listCuttype " [value]="servico.CTId">{{servico.des}} {{servico.cost}}€</option>
+                            </select>
+                            <select *ngIf="(schedule.ServiceType==1)" id="Service" name="servico" [(ngModel)]="schedule.typeId" >
+                                <option *ngFor="let servico of listTatootype " [value]="servico.TTid">{{servico.desc}} {{servico.cost}}€</option>
+                            </select> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="data">Data</label><br>
+                            <input id="data"  [(ngModel)]="schedule.date" name="data" placeholder="2022-01-01"> 
+                        </td>
+                        <td>
+                            <label for="time">Time</label><br>
+                            <input id="time"  [(ngModel)]="schedule.Time" name="time" placeholder="22:00"> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="desc">Descrição</label><br>
+                            <input id="desc" [(ngModel)]="schedule.Desc" name="desc" placeholder="Descrição">  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="sub" type="reset" value="Reset">
+                            <input class="sub" type="submit" (click)="makeschedule()" value="Submit"> 
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div class="schedulelist" *ngIf="showConsultar">
+            <ul>
+                <li *ngFor="let x of listSchedule">{{x.name}} , {{x.Locality}} , {{x.scheduleTime.substring(0,5)}} , {{x.scheduleDate}}</li>
+            </ul>
+        </div>
+    </section>
+</div>
