@@ -1,0 +1,1 @@
+Web App desenvolvida para a gestão de uma franchise de barbearias onde é possivel ter acesso a todos os serviços de barbearia bem como serviços de tatuagem. Backend desenvolvido usando Node.js e Express e frontend criado usando a framework Angular.
